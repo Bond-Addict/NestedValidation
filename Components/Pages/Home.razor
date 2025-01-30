@@ -1,0 +1,48 @@
+﻿@page "/"
+@using Validot
+@using ValidotPOC.Models
+@using ValidotPOC.Validators
+
+<PageTitle>Home</PageTitle>
+
+<EditForm EditContext="EditContext" OnInvalidSubmit="Invalid" OnValidSubmit="Submit" FormName="Demographics">
+    <FluentValidationValidator />
+    <div class="card row-cols-3">
+        <div class="card-body">
+            <InputText @bind-Value="Person.FirstName"></InputText>
+            <ValidationMessage For="@(() => Person.FirstName)" />
+            <InputText @bind-Value="Person.MiddleInitial"></InputText>
+            <InputText @bind-Value="Person.LastName"></InputText>
+            <h1>Address</h1>
+            <AddressComponent Address="Person.Address" />
+        </div>
+    </div>
+
+    <button class="btn-primary" type="submit">Submit</button>
+</EditForm>
+
+@code {
+    public Person Person { get; set; }
+    public EditContext EditContext { get; set; }
+
+    protected override void OnInitialized()
+    {
+        if (Person is null)
+            Person = new();
+
+        EditContext = new EditContext(Person);
+
+        base.OnInitialized();
+    }
+
+    private void Submit()
+    {
+        var test = new PersonValidator().Validate(Person);
+
+        var test2 = "";
+    }
+
+    private void Invalid(){
+        var test = "";
+    }
+}

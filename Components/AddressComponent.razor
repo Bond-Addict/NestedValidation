@@ -1,0 +1,35 @@
+﻿@using ValidotPOC.Models
+@using ValidotPOC.Validators
+<InputText @bind-Value="Address.Street" />
+<ValidationMessage For="@(() => Address.Street)" />
+
+@code {
+    [Parameter]
+    public Address Address { get; set; }
+
+    [CascadingParameter]
+    public EditContext EditContext { get; set; }
+    public ValidationMessageStore ValidationMessageStore { get; set; }
+
+    protected override void OnInitialized()
+    {
+        ValidationMessageStore = new(EditContext);
+        EditContext.OnValidationRequested += ValidateAddress;
+        base.OnInitialized();
+    }
+
+    private void ValidateAddress(object? sender, ValidationRequestedEventArgs e)
+    {
+        var results = new AddressValidator().Validate(Address);
+
+        foreach (var error in results.Errors)
+        {
+            var field = EditContext.Field(error.PropertyName);
+                ValidationMessageStore.Add(field, error.ErrorMessage);
+                EditContext.NotifyFieldChanged(field);
+        }
+
+        EditContext.NotifyValidationStateChanged();
+        InvokeAsync(StateHasChanged);
+    }
+}
