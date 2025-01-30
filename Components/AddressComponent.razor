@@ -1,9 +1,7 @@
 ﻿@using NestedValidation.Models
 @using NestedValidation.Validators
-<EditForm EditContext="EditContext">
-    <InputText @bind-Value="Address.Street" />
-    <ValidationMessage For="@(() => Address.Street)" />
-</EditForm>
+<InputText @bind-Value="Address.Street" />
+<ValidationMessage For="@(() => Address.Street)" />
 
 @code {
     [Parameter]
