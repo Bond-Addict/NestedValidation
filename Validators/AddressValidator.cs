@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using ValidotPOC.Models;
+using NestedValidation.Models;
 
-namespace ValidotPOC.Validators
+namespace NestedValidation.Validators
 {
     public class AddressValidator : AbstractValidator<Address>
     {

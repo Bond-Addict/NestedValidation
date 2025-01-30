@@ -1,8 +1,7 @@
 using FluentValidation;
-using Morris.Blazor.Validation;
-using ValidotPOC.Components;
-using ValidotPOC.Models;
-using ValidotPOC.Validators;
+using NestedValidation.Components;
+using NestedValidation.Models;
+using NestedValidation.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 

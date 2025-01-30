@@ -1,6 +1,6 @@
-﻿using ValidotPOC.Validators;
+﻿using NestedValidation.Validators;
 
-namespace ValidotPOC.Models
+namespace NestedValidation.Models
 {
     public class Person
     {

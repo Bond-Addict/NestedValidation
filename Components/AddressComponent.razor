@@ -1,7 +1,9 @@
-﻿@using ValidotPOC.Models
-@using ValidotPOC.Validators
-<InputText @bind-Value="Address.Street" />
-<ValidationMessage For="@(() => Address.Street)" />
+﻿@using NestedValidation.Models
+@using NestedValidation.Validators
+<EditForm EditContext="EditContext">
+    <InputText @bind-Value="Address.Street" />
+    <ValidationMessage For="@(() => Address.Street)" />
+</EditForm>
 
 @code {
     [Parameter]
@@ -25,8 +27,8 @@
         foreach (var error in results.Errors)
         {
             var field = EditContext.Field(error.PropertyName);
-                ValidationMessageStore.Add(field, error.ErrorMessage);
-                EditContext.NotifyFieldChanged(field);
+            ValidationMessageStore.Add(field, error.ErrorMessage);
+            EditContext.NotifyFieldChanged(field);
         }
 
         EditContext.NotifyValidationStateChanged();
