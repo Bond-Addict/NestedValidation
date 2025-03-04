@@ -1,0 +1,5 @@
+C:\VS\NestedValidation\NestedValidation.UI\obj\Debug\net8.0\staticwebassets.build.json
+C:\VS\NestedValidation\NestedValidation.UI\obj\Debug\net8.0\staticwebassets.build.json
+C:\VS\NestedValidation\NestedValidation.UI\obj\Debug\net8.0\staticwebassets.build.json
+C:\VS\NestedValidation\NestedValidation.UI\obj\Debug\net8.0\staticwebassets.build.json
+C:\VS\NestedValidation\NestedValidation.UI\obj\Debug\net8.0\staticwebassets.build.json

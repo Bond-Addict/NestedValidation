@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v7.0": {
       "NestedValidationBlazorServer/1.0.0": {
         "dependencies": {
-          "Blazored.FluentValidation": "2.2.0"
+          "Blazored.FluentValidation": "2.2.0",
+          "MudBlazor": "8.3.0"
         },
         "runtime": {
           "NestedValidationBlazorServer.dll": {}
@@ -129,6 +130,7 @@
           }
         }
       },
+      "MudBlazor/8.3.0": {},
       "System.IO.Pipelines/7.0.0": {}
     }
   },
@@ -235,6 +237,13 @@
       "sha512": "sha512-ug47NElJo58cnA8+YcZx5+mDScrtnkd+Fgi/pLio76O0WYvAc9qGT4cXEVEqX1YcqwHmLgP1NBol6uzYyUqbAw==",
       "path": "microsoft.jsinterop/7.0.20",
       "hashPath": "microsoft.jsinterop.7.0.20.nupkg.sha512"
+    },
+    "MudBlazor/8.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DLc1aK8AgSas82AERWLLefWKadIF7HhYhvgO8Y7jYLZe5v1r4v3rX9pzrzTsQkuPGe6y65tob73kM6gael+WdQ==",
+      "path": "mudblazor/8.3.0",
+      "hashPath": "mudblazor.8.3.0.nupkg.sha512"
     },
     "System.IO.Pipelines/7.0.0": {
       "type": "package",

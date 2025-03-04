@@ -1,0 +1,12 @@
+﻿@using NestedValidation.Models
+@using NestedValidation.UI.Validators
+@using NestedValidation.Validators
+<MudForm Model="Address" Validation="validator.ValidateValue">
+    <MudTextField @bind-Value="Address.Street" For="@(() => Address.Street)" />
+</MudForm>
+
+@code {
+    [Parameter]
+    public Address Address {get; set;} = new ();
+    AddressValidator validator = new();
+}

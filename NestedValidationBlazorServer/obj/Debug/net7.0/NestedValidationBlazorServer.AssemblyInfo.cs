@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NestedValidationBlazorServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ecb8df1d77ca7d1559068dda4e30da96b16e1dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d685b6b430ae006c178d342167ce57fca21064ab")]
 [assembly: System.Reflection.AssemblyProductAttribute("NestedValidationBlazorServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NestedValidationBlazorServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

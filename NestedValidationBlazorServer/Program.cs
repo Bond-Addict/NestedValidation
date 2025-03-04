@@ -1,12 +1,12 @@
-using FluentValidation;
-using NestedValidation.Models;
-using NestedValidation.Validators;
+using MudBlazor.Services;
+using NestedValidation.UI;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.Add_UI_Services();
 
 var app = builder.Build();
 

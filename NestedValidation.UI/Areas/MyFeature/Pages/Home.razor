@@ -1,0 +1,42 @@
+@page "/"
+@using NestedValidation.Models
+@using NestedValidation.Validators
+<ErrorBoundary Context="ErrorContext" @ref="errorBoundary">
+    <ChildContent>
+        <MudCard>
+            <MudCardContent>
+                <MudForm Model="@Person" Validation="validator.ValidateValue">
+                    <div class="card row-cols-3">
+                        <div class="card-body">
+                            <MudTextField @bind-Value="Person.FirstName" For="@(() => Person.FirstName)"></MudTextField>
+                            <MudTextField @bind-Value="Person.MiddleInitial" For="@(() => Person.MiddleInitial)"></MudTextField>
+                            <MudTextField @bind-Value="Person.LastName" For="@(() => Person.LastName)"></MudTextField>
+                            <h1>Address</h1>
+                            <AddressComponent Address="Person.Address" />
+                        </div>
+                    </div>
+
+                    <button class="btn-primary" type="submit">Submit</button>
+                </MudForm>
+            </MudCardContent>
+        </MudCard>
+    </ChildContent>
+</ErrorBoundary>
+
+@code {
+    Person Person = new();
+    PersonValidator validator = new();
+    private ErrorBoundary errorBoundary;
+
+    private void Submit()
+    {
+        var test = new PersonValidator().Validate(Person);
+
+        var test2 = "";
+    }
+
+    private void Invalid()
+    {
+        var test = "";
+    }
+}
